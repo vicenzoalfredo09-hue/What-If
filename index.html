@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sunset Beach</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .sky {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to top, #ff7e5f, #feb47b, #ffd9a0);
+    }
+
+    .sun {
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #fff176, #ff9800);
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(255, 200, 0, 0.8);
+    }
+
+    .ocean {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 35%;
+      background: linear-gradient(to top, #1e3c72, #2a5298);
+    }
+
+    .wave {
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      background: rgba(255,255,255,0.1);
+      border-radius: 40%;
+      animation: waveMove 6s infinite linear;
+    }
+
+    .wave:nth-child(1) {
+      top: 10%;
+      animation-duration: 8s;
+    }
+
+    .wave:nth-child(2) {
+      top: 20%;
+      animation-duration: 6s;
+    }
+
+    @keyframes waveMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .sand {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 15%;
+      background: #f4d19b;
+    }
+
+    .text {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 2em;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .heart {
+      position: absolute;
+      bottom: 18%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 30px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -10px); }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="sky">
+  <div class="text">🌴 Cute Sunset Beach 🌴</div>
+
+  <div class="sun"></div>
+
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+
+  <div class="sand"></div>
+
+  <div class="heart">💖</div>
+</div>
+
+</body>
+  </html>
